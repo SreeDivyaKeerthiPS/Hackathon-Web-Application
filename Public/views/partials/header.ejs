@@ -1,0 +1,41 @@
+<header>
+  <link href="/assets/styles/styles.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/styles/connections.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/styles/connection.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/styles/about.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/styles/index.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/styles/newconnection.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/assets/styles/savedConnections.css" type="text/css" />
+  <div id="top-header">
+    <nav id="logo">
+      <a href="../index">  <img src="/assets/images/hackathonlogo.jpg" alt="Smiley face"/> </a>
+
+    </nav>
+
+    <nav id="menu">
+      <ul>
+          <%   if(session === undefined){ %>
+            <li><a href="#">Sign up</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/login">Start a new Hackathon</a></li>
+          <% } %>
+
+
+
+            <%   if(session != undefined){ %>
+
+                          <%  if(session.length===0){ %>
+                            <li><a href="/newConnection">Start a new Hackathon</a></li>
+                            <li><a href="/savedConnections">My Hackthons</a></li>
+                            <li><a href="/savedConnections/logout">Login</a></li>
+                          <%  }  %>
+                        <%  if(session.length!=0){ %>
+                      <li><a href="/newConnection">Start a new Hackathon</a></li>
+                      <li><a href="/savedConnections">My Hackthons</a></li>
+                      <li><a href="/savedConnections/logout">LOG OUT</a></li>
+                  <%  }  %>
+                  <% } %>
+      </ul>
+    </nav>
+  </div>
+</header>

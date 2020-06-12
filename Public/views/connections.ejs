@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hackathon Website</title>
+
+  </head>
+  <body>
+
+    <%- include ('partials/header.ejs') %>
+        <%- include ('partials/nav2.ejs') %>
+    <main id="maincat" class="mainConpag">
+      <div class="insideDivalign">
+        <% Object.keys(connectionData).forEach(function(index) { %>
+        <h2><%= index %></h2>
+        <ul class="nobull">
+          <% connectionData[index].forEach(function(val) {%>
+     <li> <a href="/connection?connectionId=<%= val[1] %>"> <%= val[0] %> </a> </li>
+
+   <% }); %>
+        </ul>
+
+     <% }); %>
+   </div>
+</main>
+
+    <%- include ('partials/footer.ejs') %>
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<nav class="extra">
+    <link href="/assets/styles/styles.css" rel="stylesheet" type="text/css" />
+
+<%   if(session === undefined){ %>
+<p> <a href="/connections">Categories</a> </p>
+<% } %>
+<%   if(session != undefined){ %>
+            <p> <a href="/connections">Categories</a> </p>
+            <div id="Name">
+            <a href="#">Welcome <%= session.FirstName %></a>
+            </div>
+        <% } %>
+
+</nav>

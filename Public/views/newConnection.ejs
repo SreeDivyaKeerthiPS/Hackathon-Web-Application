@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+    <title>Hackathon Website</title>
+      <link href="/assets/styles/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/nav2.ejs') %>
+<main id="maincat">
+  <div class="newcon">
+    <%
+          if(error){
+              error.forEach(function(item){%>
+        <div class="error"><%=item.msg %></div>
+              <%});
+      } %>
+<form id="connection-form" method="POST" action="/createhackathon" >
+  <h2> Create your own Hackathon </h2>
+<label for="topic"> topic </label>
+<input type="text" id="topic" name="topic" required>  <br><br>
+<label for="name"> name </label>
+<input type="text" id="name" name="name" required> <br><br>
+<label for="details"> Details </label>
+<input type="text" id="details" name="details" required> <br><br>
+<label for="location"> Location </label>
+<input type="text" id="location" name="location" required> <br><br>
+<label for="date"> Date </label>
+<input type="text" id="date" name="date" required><br><br>
+<label for="time"> Time </label>
+<input type="time" id="time" name="time" required><br><br>
+<button type="submit" class="btn btn-blue" name=createhackathon
+                              value="Create Hackathon">Create Hackathon</button>
+    </form>
+  </div>
+</main>
+    <%- include ('partials/footer.ejs') %>
+
+  </body>
+</html>

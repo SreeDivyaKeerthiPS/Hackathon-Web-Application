@@ -1,0 +1,163 @@
+use nbad
+db.connectiondbs.drop();
+db.userdbs.drop();
+db.userprofiledbs.drop();
+db.logininfodb.drop();
+
+db.createCollection("connectiondbs");
+db.createCollection("userdbs");
+db.createCollection("userprofiledbs");
+db.createCollection("logininfodb");
+db.connectiondbs.insertMany([
+
+{
+             connectionId: "1",
+             topic:"Big Data Analytics",
+             name: "Data Science hacks",
+             host: "UNC Charlotte",
+             details: "Data Science Hackathon is a competition that hones the ability of participants to be able to solve existing problems in daily life or certain fields according to the theme that is carried every year. This year, together with the Queens University, UNCC will hold the Hackathon with the theme of Data Science.",
+             date: "25th Feb, 2020",
+             time: "3.30 pm to 6.30 pm",
+             location: "Hall-208, Cone Center, UNCC, NC",
+             image:"bigdata.jpg",
+          },
+
+          {
+            connectionId: "2",
+            topic:"Big Data Analytics",
+            name: "Global hackit",
+            host: "Youth Global Hack Team",
+            details: "Global Hackathon is an international competition held for students across the world",
+            date: "16th Mar, 2020",
+            time: "3.30 pm to 6.30 pm",
+            location: "Hall-208, Cone Center, UNCC, NC",
+            image:"bigdata.jpg",
+          },
+		  
+		  
+		  
+		  {
+             connectionId: "3",
+             topic:"Big Data Analytics",
+             name: "StarterHacks 2020",
+             host: "Welfitiar Human Welfare Organization",
+             details: "StarterHacks 2020 is a hackathon for freshmen in USA",
+             date: "02th June, 2020",
+             time: "3.30 pm to 6.30 pm",
+             location:  "Hall-208, Cone Center, UNCC, NC",
+             image:"bigdata.jpg",
+          },
+
+          {
+             connectionId: "04",
+             topic: "Artificial Intelligence",
+             name: "HackVSIT 3rd Edition",
+             host: "VSIT board",
+             details: "HackVSIT 3rd Edition is a hackathon for students in USA.",
+             date: "01th May, 2020",
+             time: "3.30 pm to 6.30 pm",
+             location: "Hall-208, Cone Center, UNCC, NC",
+             image:"bigdata.jpg",
+          },
+          {
+
+            connectionId: "5",
+            topic: "Artificial Intelligence",
+            name: "DotSlash",
+            host: 'Slash Organization',
+            details: "DotSlash is a hackathon for students of all colleges in USA.",
+            date: '03th Feb, 2020',
+            time: '3.30 pm to 6.30 pm',
+            location:  'Hall-208, Cone Center, UNCC, NC',
+            image:"bigdata.jpg",
+          },
+          {
+             connectionId: "6",
+             topic: "Artificial Intelligence",
+             name: "UHackathon2.0",
+             host: 'university Hackathon club',
+             details: "UHackathon2.0 is a hackathon for students of all colleges in USA.",
+             date: '11th Oct, 2020',
+             time: '3.30 pm to 6.30 pm',
+             location:  'Hall-208, Cone Center, UNCC, NC',
+             image:"bigdata.jpg",
+          },
+
+          {
+             connectionId: "7",
+             topic: "Cyber Security",
+             name: "Hahathon",
+             host: 'Fun club Charlotte',
+            details: "Hahathon is a hackathon for students of all colleges in USA.",
+             date: '10th Sept, 2020',
+             time: '3.30 pm to 6.30 pm',
+             location:  'Hall-208, Cone Center, UNCC, NC',
+             image:"bigdata.jpg",
+          },
+          {
+
+            connectionId: "8",
+            topic: "Cyber Security",
+            name: "NMIT Hacks",
+            host: "Youth Global Hack Team",
+            details: "NMIT Hacks is a hackathon for students of all colleges in USA.",
+            date: "18th July, 2020",
+            time: "3.30 pm to 6.30 pm",
+            location: "Hall-208, Cone Center, UNCC, NC",
+            image:"bigdata.jpg",
+          },
+          {
+             connectionId: "9",
+             topic: "Cyber Security",
+             name: "Syberthon",
+             host: "Welfitiar Human Welfare Organization",
+             details: "NMIT Hacks is a hackathon for students of all colleges in USA.",
+             date: "19th June, 2020",
+             time: "3.30 pm to 6.30 pm",
+             location:  "Hall-208, Cone Center, UNCC, NC",
+             image:"bigdata.jpg",
+          },
+
+          {
+             connectionId: "10",
+             topic: "IOT",
+             name: "BrebeufHx",
+             host: "VSIT board",
+             details: "BrebeufHx is a hackathon for students of all colleges in USA.",
+             date: "21th Apr, 2020",
+             time: "3.30 pm to 6.30 pm",
+             location: "Hall-208, Cone Center, UNCC, NC",
+             image:"bigdata.jpg",
+          },
+          {
+
+            connectionId: "11",
+            topic: "IOT",
+            name: "Oak Codefest",
+            host: 'Slash Organization',
+            details: "Oak Codefest is a hackathon for students of all colleges in USA.",
+            date: '18th Apr, 2020',
+            time: '3.30 pm to 6.30 pm',
+            location:  'Hall-208, Cone Center, UNCC, NC',
+            image:"bigdata.jpg",
+
+          },
+          {
+             connectionId: "12",
+             topic: "IOT",
+             name: "Anjac",
+             host: 'university Hackathon club',
+             details: "Anjac Hackathon is for students of all colleges in USA.",
+             date: '13th Mar, 2020',
+             time: '3.30 pm to 6.30 pm',
+             location:  'Hall-208, Cone Center, UNCC, NC',
+             image:"bigdata.jpg",
+          }
+		  
+		  ]);
+
+db.connectiondbs.find();
+db.userdbs.insert([{userId: "1",firstName:"Divya",lastName: "Paravasthu",email: "divya@uncc.edu"},{userId: "2",firstName:"Navya",lastName: "Paravasthu",email: "navya@uncc.edu"}]);
+db.userdbs.find();
+db.logininfodb.insert([{userId: "1", email:"divya@uncc.edu", password: "Divya@123"},{userId: "2", email:"navya@uncc.edu", password: "Navya@123"}]);
+db.logininfodb.find();

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hackathon Website</title>
+  </head>
+  <body>
+
+    <%- include ('partials/header.ejs') %>
+      <%- include ('partials/nav2.ejs') %>
+    <main>
+
+	  <div id="hack">
+
+<h1> <u> Gear Up for <%= connectionData.name %> Hackathon </u></h1>
+
+	  </div>
+	  <div class="row" id="hacklogo">
+	    <div class="column" >
+		  <a href="#">  <img src="/assets/images/uncc.jpg" alt="Smiley face"/> </a>
+      <p> Hosted By: <%= connectionData.host %> <br>
+          Date: <%= connectionData.date %> <br>
+          Time: <%= connectionData.time %> <br>
+          Location: <%= connectionData.location %>
+           <br> </p>
+		  <a href="/savedConnections">REGISTER</a>
+        </div>
+
+		<div class="column">
+          <h2>Description </h2>
+		  <p> <%= connectionData.details %> </p>
+
+      <div class="item-action">
+
+                <% if(session === undefined){ %>
+                <form method="get" action="/login">
+                  <button class="button" id="Yes" name="formValue" value="Yes">Yes </button>
+                  <button class="button" id="No" name="formValue" value="No">No</button>
+                  <button class="button" id="MayBe" name="formValue" value="Maybe"> May Be</button>
+                  </form>
+                    <% } %>
+
+                <% if(session != undefined){ %>
+
+
+
+                      <div class="myfav-row">
+                      <div class="myfav-article-tick "></div>
+                    <div class="myfav-article-action">
+
+                    <form method="post" action="/savedConnections/rsvp?connectionId=<%= connectionData.connectionId %>">
+                        <button class="button" id="Yes" name="formValue" value="Yes">Yes </button>
+                        <button class="button" id="No" name="formValue" value="No">No</button>
+                        <button class="button" id="MayBe" name="formValue" value="Maybe"> May Be</button>
+                    </form>
+                  </div>
+                  </div>
+                    <% } %>
+                </div>
+        </div>
+  </div>
+    </main>
+
+      <%- include ('partials/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+#header-image-menu{
+    position: relative;
+}
+
+#header-image-menu img{
+    width: 100%;
+	  height: 100%;
+    margin: none;
+    padding: none;
+    opacity: 0.2;
+}
+#image-text{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    font-family: 'Roboto';
+    color: #000;
+    transform: translate(-30%, -30%);
+    text-align: center;
+    font-size: 17px;
+}

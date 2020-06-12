@@ -1,0 +1,28 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "MileStone2",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.0.1",
+    "ejs-lint": "^1.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "moment": "^2.25.1",
+    "mongoose": "^5.9.9",
+    "short-id": "0.1.0-1",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "milestone"
+  },
+  "keywords": [
+    "mielstone"
+  ],
+  "author": "Sree Divya Keerthi Paravasthu Siddanthi",
+  "license": "ISC"
+}

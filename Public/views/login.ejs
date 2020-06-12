@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+    LOGIN PAGE
+  </title>
+  </head>
+  <body>
+
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/nav2.ejs') %>
+<main id="maincat">
+
+  <div class="newcon">
+      <form id="login-form" method="POST" action="/savedConnections/loginuser">
+        <h2> Welcome to Explore Hackathons around you ! </h2>
+
+        <p> please enter your username and password to signin </p>
+        <%
+          if(error){
+              error.forEach(function(item){%>
+        <div class="error"><%=item.msg %></div>
+        <%});
+  } %>
+      <label for="username"> username </label>
+      <input type="text" id="username" name="username"> <br><br>
+      <label for="password"> password </label>
+      <input type="text" id="password" name="password"> <br><br>
+      <input type="submit" value = "Login"/>
+
+          </form>
+        </div>
+    </main>
+            <%- include ('partials/footer.ejs') %>
+    </body>
+</html>

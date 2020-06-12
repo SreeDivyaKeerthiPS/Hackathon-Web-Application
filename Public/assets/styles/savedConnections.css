@@ -1,0 +1,130 @@
+
+#saved{
+    float: center;
+	text-align: center;
+    padding: none;
+    margin: none;
+    height: 500px;
+    width: 100%;
+    display:inline;
+    background: #FFA500	;
+    position: relative;
+	display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    flex: 1;
+}
+div#main-content-area{
+    width: auto;
+    height: 84vh;
+    margin-left: 0%;
+    padding: 20px;
+    overflow: auto;
+    font-family: Source Sans Pro,sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.5em;
+    background-color: #fff;
+    position: relative;
+}
+div#main-content-area ul{
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 50px;
+    text-indent: 0;
+}
+#my-fav .main-content{
+  width: 100%;
+  position: relative;
+  padding: None;
+    /* border-bottom: 2px solid #888;
+    padding-bottom: 300px; */
+}
+#my-fav .header-div{
+    width: 90%;
+    border-bottom: 2px solid #888;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+#my-fav .header-div div {
+    width: 17%;
+    height: 30px;
+    padding: 0px 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+#my-fav input[type=button]{
+    padding: 0px 0px;
+}
+
+#my-fav .header-div .header-tick{
+    width: 2%;
+}
+#my-fav .header-div .header-rsvp{
+    width: 23%;
+}
+#my-fav .header-div .header-action{
+    width:14%;
+}
+#my-fav .row{
+    clear: both;
+    width: 80%;
+    display: inline-block;
+    padding: 10px 80px;
+    overflow: auto;
+    background: #FFA500	;
+}
+#my-fav .row div{
+    float: left;
+    height: 50px;
+    text-align: left;
+    word-break: break-word;
+    padding-bottom: 15px;
+}
+#my-fav .article-tick{
+    width: 2%;
+    padding-right: 10px;
+}
+.article-tick.active:before{
+    content: "\2714";
+    color: rgb(43, 139, 43);
+    font-size: 1.3em;
+}
+#my-fav .article-title{
+    width: 22%;
+}
+
+#my-fav .article-action{
+    width: 30%;
+    text-align: center;
+}
+
+.legends{
+    position: absolute;
+    bottom : 5px;
+}
+.legends .article-tick{
+    float: left;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

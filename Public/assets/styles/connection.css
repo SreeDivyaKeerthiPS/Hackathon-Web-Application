@@ -1,0 +1,60 @@
+#hack{
+    float: left;
+	text-align: center;
+    padding: none;
+    margin: none;
+    height: 100px;
+    width: 100%;
+    display:inline;
+    background: #7FFFD4	;
+    position: relative;
+	  display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    flex: 1;
+}
+
+ #hacklogo{
+    float: bottom;
+	text-align: center;
+    padding: none;
+    margin: none;
+    height: 400px;
+    width: 100%;
+    display:inline;
+    background: #7FFFD4	;
+    position: relative;
+	display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    flex: 1;
+}
+#hacklogo img{
+    text-align: left;
+    width: 20%;
+	height: 120px;
+    padding: 0px 0px;
+}
+#hack img{
+    text-align: left;
+    width: 20%;
+	height: 120px;
+    padding: 0px 0px;
+}
+#hacklogo a{
+
+    letter-spacing: 1px;
+	text-align: center;
+	float: center;
+    color: #000000;
+	display: inline;
+}
+
+#hacklogo h1{
+
+    letter-spacing: 1px;
+	text-align: center;
+	float: center;
+    color: #000000;
+	display: inline;
+}

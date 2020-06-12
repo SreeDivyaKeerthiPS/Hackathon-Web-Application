@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Saved Connections</title>
+    </head>
+    <body>
+
+          <%- include ('partials/header.ejs') %>
+            <%- include ('partials/nav2.ejs') %>
+
+        <main id="saved">
+          <% if (data.UserConnectionList.length === 0) { %>
+            <%
+                  if(error){
+                      error.forEach(function(item){%>
+                <div class="error"> <h2> <%=item.msg %> </h2> </div>
+                      <%});
+              } %>
+                              <h2> You have no saved Connections yet!</h2>
+                          <% } else { %>
+        <div id="main-content-area">
+            <div id="my-fav" class="article">
+                <section class="main-content">
+                    <div class="header-div">
+                        <div class="header-tick" ></div>
+                        <div class="header-title" >HACKATHON</div>
+                        <div class="header-title" >CATEGORY</div>
+                        <div class="header-rsvp">RESPONSE</div>
+
+                        <div class="header-action">ACTION</div>
+
+                    </div>
+
+
+ <% data.UserConnectionList.forEach(function(item){ %>
+
+                    <div class="row">
+                        <div class="article-tick "></div>
+                        <div class="article-title"><%= item.name %></div>
+                        <div class="article-title"><%= item.topic %></div>
+                        <div class="article-title"><%= item.rsvp %></div>
+                        <div class="article-action">
+                                <form method="post" action="/savedConnections/update?connectionId=<%= item.connectionId %>&rsvp=<%= item.rsvp %>">
+                                    <button class="button" id="Update<%= item.connectionId %>" name="formValue" value="Update">Update </button>
+                                    <button class="button" id="Delete<%= item.connectionId %>" name="formValue" value="Delete">Delete </button>
+                                    <input type="hidden" id="hidden<%= item.connectionId %>" name="viewConnections" value="8990">
+                                </form>
+                        </div>
+                    </div>
+<% }); %>
+
+                </section>
+            </div>
+        </div>
+    <%    } %>
+      </main>
+<%- include ('partials/footer.ejs') %>
+    </body>
+</html>
